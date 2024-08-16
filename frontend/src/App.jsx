@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
+  About,
   AddEvent,
   AddGroup,
   AllEvents,
@@ -33,12 +34,16 @@ const router = createBrowserRouter([
         element: <Landing />,
       },
       {
+        path: "register",
+        element: <Register />,
+      },
+      {
         path: "login",
         element: <Login />,
       },
       {
-        path: "register",
-        element: <Register />,
+        path: "about",
+        element: <About />,
       },
       {
         path: "dashboard",

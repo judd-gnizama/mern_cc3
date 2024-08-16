@@ -1,43 +1,21 @@
-import AddEvent from "./AddEvent";
-import AddGroup from "./AddGroup";
-import AllEvents from "./AllEvents";
-import AllGroups from "./AllGroups";
-import DashboardFeed from "./DashboardFeed";
-import DashboardLayout from "./DashboardLayout";
-import EditEvent from "./EditEvent";
-import EditGroup from "./EditGroup";
-import Error from "./Error";
-import EventAdmin from "./EventAdmin";
-import EventLayout from "./EventLayout";
-import EventQueue from "./EventQueue";
-import EventStats from "./EventStats";
-import GroupInfo from "./GroupInfo";
-import GroupLayout from "./GroupLayout";
-import HomeLayout from "./HomeLayout";
-import Landing from "./Landing";
-import Login from "./Login";
-import Register from "./Register";
-import UserProfile from "./UserProfile";
-
-export {
-  AddEvent,
-  AddGroup,
-  AllEvents,
-  AllGroups,
-  DashboardFeed,
-  DashboardLayout,
-  EditEvent,
-  EditGroup,
-  Error,
-  EventAdmin,
-  EventLayout,
-  EventQueue,
-  EventStats,
-  GroupInfo,
-  GroupLayout,
-  HomeLayout,
-  Landing,
-  Login,
-  Register,
-  UserProfile,
-};
+export { default as About } from "./About";
+export { default as AddEvent } from "./AddEvent";
+export { default as AddGroup } from "./AddGroup";
+export { default as AllEvents } from "./AllEvents";
+export { default as AllGroups } from "./AllGroups";
+export { default as DashboardFeed } from "./DashboardFeed";
+export { default as DashboardLayout } from "./DashboardLayout";
+export { default as EditEvent } from "./EditEvent";
+export { default as EditGroup } from "./EditGroup";
+export { default as Error } from "./Error";
+export { default as EventAdmin } from "./EventAdmin";
+export { default as EventLayout } from "./EventLayout";
+export { default as EventQueue } from "./EventQueue";
+export { default as EventStats } from "./EventStats";
+export { default as GroupInfo } from "./GroupInfo";
+export { default as GroupLayout } from "./GroupLayout";
+export { default as HomeLayout } from "./HomeLayout";
+export { default as Landing } from "./Landing";
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as UserProfile } from "./UserProfile";
