@@ -5,6 +5,7 @@ const HomeLayout = () => {
     <>
       <h1>HomeLayout</h1>
       <nav className="nav-links">
+        <Link to="">Landing</Link>
         <Link to="login">Login</Link>
         <Link to="register">Register</Link>
       </nav>
