@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <Wrapper>
-      <div className="nav-center _borders">
+      <div className="nav-center">
         <Logo href={"/"} />
         <div className="nav-right">
           <nav className="nav-links">

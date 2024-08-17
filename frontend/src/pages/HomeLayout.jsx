@@ -1,18 +1,21 @@
-import { Link, Outlet } from "react-router-dom";
-import Header from "../components/Header";
+import { Outlet } from "react-router-dom";
 import HomeContextProvider from "../contexts/HomeContextProvider";
-import MenuMobile from "../components/MenuMobile";
+import { Header, MenuMobile } from "../components";
+import Wrapper from "../assets/wrappers/HomeLayout";
 
 const HomeLayout = () => {
   return (
-    <>
-      <HomeContextProvider>
-        <Header />
-        <MenuMobile />
-        <h1>HomeLayout</h1>
-        <Outlet />
-      </HomeContextProvider>
-    </>
+    <HomeContextProvider>
+      <Wrapper>
+        <main className="page-home">
+          <Header />
+          <MenuMobile />
+          <div className="page-content">
+            <Outlet />
+          </div>
+        </main>
+      </Wrapper>
+    </HomeContextProvider>
   );
 };
 

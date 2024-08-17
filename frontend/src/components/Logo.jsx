@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/cc_logo_round.png";
+import { cc_logo_round } from "../assets/images";
 const Logo = ({ path }) => {
   return (
     <Link to={path} className="logo-container">
-      <img src={logo} alt="cc" className="logo" />
+      <img src={cc_logo_round} alt="cc" className="logo" />
       <span className="logo-text">Court Control</span>
     </Link>
   );

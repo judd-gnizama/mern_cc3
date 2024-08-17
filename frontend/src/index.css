@@ -170,10 +170,25 @@ a {
   }
 }
 
-.hidden {
-  display: none;
+/* Buttons */
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
 }
 
-.show {
-  display: block;
+.btn-primary {
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.5px;
+  background-color: var(--primary-600);
+}
+.btn-secondary {
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.5px;
+  border: 1px solid var(--black);
+  background-color: transparent;
 }
