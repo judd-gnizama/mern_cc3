@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/images/cc_logo_round.png";
-const Logo = ({ href }) => {
+const Logo = ({ path }) => {
   return (
-    <a href={href} className="logo-container">
+    <Link to={path} className="logo-container">
       <img src={logo} alt="cc" className="logo" />
       <span className="logo-text">Court Control</span>
-    </a>
+    </Link>
   );
 };
 
