@@ -22,6 +22,7 @@ import {
   Register,
   UserProfile,
 } from "./pages";
+import HomeContextProvider from "./contexts/HomeContextProvider";
 
 const router = createBrowserRouter([
   {
@@ -122,7 +123,11 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <HomeContextProvider>
+      <RouterProvider router={router} />
+    </HomeContextProvider>
+  );
 };
 
 export default App;

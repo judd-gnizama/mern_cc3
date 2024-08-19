@@ -2,7 +2,7 @@ import styled from "styled-components";
 import mediaScreens from "../css/mediaScreens";
 
 const Wrapper = styled.header`
-  height: calc(0.6 * var(--nav-height));
+  height: calc(var(--nav-height));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@ const Wrapper = styled.header`
   .nav-center {
     display: flex;
     height: 100%;
-    padding: 1rem;
+    padding: 1rem 0;
     width: var(--fluid-width);
     max-width: var(--max-width);
     align-items: center;
@@ -41,6 +41,7 @@ const Wrapper = styled.header`
     font-size: 2rem;
     border: none;
     background: transparent;
+    padding: 0;
   }
 
   .logo-container {

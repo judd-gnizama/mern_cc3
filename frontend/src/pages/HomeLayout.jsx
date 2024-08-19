@@ -1,21 +1,33 @@
 import { Outlet } from "react-router-dom";
-import HomeContextProvider from "../contexts/HomeContextProvider";
-import { Header, MenuMobile } from "../components";
+import HomeContextProvider, {
+  useHomeContext,
+} from "../contexts/HomeContextProvider";
+import { Footer, Header, MenuMobile } from "../components";
 import Wrapper from "../assets/wrappers/HomeLayout";
 
 const HomeLayout = () => {
+  const { toggleMenu } = useHomeContext();
+
   return (
-    <HomeContextProvider>
-      <Wrapper>
-        <main className="page-home">
+    <Wrapper>
+      <main className="page-home">
+        <header>
           <Header />
-          <MenuMobile />
-          <div className="page-content">
-            <Outlet />
-          </div>
-        </main>
-      </Wrapper>
-    </HomeContextProvider>
+        </header>
+        {toggleMenu && (
+          <nav>
+            <MenuMobile />
+          </nav>
+        )}
+
+        <div className="page-content">
+          <Outlet />
+        </div>
+        <footer>
+          <Footer />
+        </footer>
+      </main>
+    </Wrapper>
   );
 };
 

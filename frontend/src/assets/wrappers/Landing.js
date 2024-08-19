@@ -1,72 +1,68 @@
 import styled from "styled-components";
+import mediaScreens from "../css/mediaScreens";
 
 const Wrapper = styled.section`
+  text-align: center;
   display: grid;
-  max-width: var(--max-width);
-  background-image: linear-gradient(to bottom, transparent, black);
-  z-index: 0;
-  .section-hero {
-    grid-template-rows: 1fr auto;
-    height: calc(100vh - 0.6 * var(--nav-height));
+  /* width: 80%; */
+  padding: 0 1rem;
+  margin: 0 auto;
 
+  .section-hero {
+    display: grid;
+    height: calc(100vh - var(--nav-height));
+    place-items: center;
+    grid-template-areas:
+      "image"
+      "inner";
+
+    .section-bg {
+      grid-area: image;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .section-inner {
-      display: grid;
-      text-align: center;
+      grid-area: inner;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: -50%;
 
       .section-title {
         font-weight: 700;
+        padding: 0 1rem;
       }
 
       p {
-        margin-top: 0.5rem;
+        padding: 0 2rem;
       }
 
       .btn-group {
-        margin-top: 1.5rem;
         display: grid;
-        gap: 0.5rem;
+        gap: 0.3rem;
       }
     }
   }
+  @media (min-width: ${mediaScreens.sm}) {
+    .section-hero {
+      text-align: left;
+      grid-template-areas: "inner image";
 
-  section {
-    display: grid;
-    grid-template-rows: 1fr;
-    padding: 2rem;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 1;
-
-    .section-bg {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
-      z-index: -10;
-      width: var(--fluid-width);
-      height: 100%;
-      img {
-        width: 100%;
+      .section-bg {
+      }
+      .section-inner {
+        margin-top: 0;
+        .section-title,
+        p {
+          padding: 0;
+        }
+        .btn-group {
+          display: flex;
+          flex-wrap: wrap;
+        }
       }
     }
-  }
-
-  .section-inner {
-    display: grid;
-    text-align: center;
-
-    .section-title {
-      font-weight: 700;
-    }
-
-    p {
-      margin-top: 0.5rem;
-    }
-  }
-
-  .group-feature {
-    display: none;
   }
 `;
 
