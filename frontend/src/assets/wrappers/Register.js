@@ -3,8 +3,9 @@ import styled from "styled-components";
 const Wrapper = styled.section`
   height: calc(100vh - var(--nav-height));
   display: grid;
+  grid-template-columns: 1fr;
   place-items: center;
-  .section-center {
+  .article {
     display: grid;
     gap: 1rem;
     padding: 2rem 1rem;
@@ -16,9 +17,14 @@ const Wrapper = styled.section`
       text-align: center;
     }
 
-    p {
+    p,
+    span {
       font-size: var(--small-text);
       text-align: center;
+    }
+
+    span {
+      margin-top: 2rem;
     }
   }
   .form {
@@ -52,6 +58,20 @@ const Wrapper = styled.section`
     border: none;
     background-color: transparent;
     width: 100%;
+  }
+
+  .btn-visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 1rem;
+    font-size: 1.25rem;
+    color: var(--grey-500);
   }
 
   .link {
