@@ -4,7 +4,6 @@ import mediaScreens from "../css/mediaScreens";
 const Wrapper = styled.section`
   text-align: center;
   display: grid;
-  /* width: 80%; */
   padding: 0 1rem;
   margin: 0 auto;
 
@@ -26,8 +25,8 @@ const Wrapper = styled.section`
       grid-area: inner;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
       margin-top: -50%;
+      gap: 2rem;
 
       .section-title {
         font-weight: 700;
@@ -35,6 +34,7 @@ const Wrapper = styled.section`
       }
 
       p {
+        margin-top: 1rem;
         padding: 0 2rem;
       }
 
