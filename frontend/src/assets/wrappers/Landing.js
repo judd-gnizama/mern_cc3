@@ -20,6 +20,7 @@ const Wrapper = styled.section`
       display: flex;
       align-items: center;
       justify-content: center;
+      max-width: 80%;
     }
     .section-inner {
       grid-area: inner;

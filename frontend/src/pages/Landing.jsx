@@ -1,8 +1,4 @@
-import {
-  badminton_smash,
-  badminton_smash2,
-  shuttlecock,
-} from "../assets/images";
+import { badminton_smash } from "../assets/images";
 import Wrapper from "../assets/wrappers/Landing";
 
 const Landing = () => {
