@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import HomeContextProvider, {
   useHomeContext,
 } from "../contexts/HomeContextProvider";
-import { Footer, Header, MenuMobile } from "../components";
+import { Footer, Header, MenuMobile, SideMenu } from "../components";
 import Wrapper from "../assets/wrappers/HomeLayout";
 import Register from "./Register";
 import Login from "./Login";
@@ -20,7 +20,6 @@ const HomeLayout = () => {
       return (
         <Wrapper>
           <Header />
-          {toggleMenu && <MenuMobile />}
 
           <div className="page-content">
             <Outlet />
@@ -28,6 +27,8 @@ const HomeLayout = () => {
           <footer>
             <Footer />
           </footer>
+          {/* {toggleMenu && <MenuMobile />} */}
+          <SideMenu />
         </Wrapper>
       );
   }

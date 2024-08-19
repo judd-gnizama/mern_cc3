@@ -4,7 +4,7 @@ import mediaScreens from "../css/mediaScreens";
 const Wrapper = styled.section`
   text-align: center;
   display: grid;
-  padding: 0 1rem;
+  padding: 0 3rem;
   margin: 0 auto;
 
   .section-hero {
@@ -47,7 +47,7 @@ const Wrapper = styled.section`
       }
     }
   }
-  @media (min-width: ${mediaScreens.sm}) {
+  @media (min-width: ${mediaScreens.md}) {
     .section-hero {
       text-align: left;
       grid-template-areas: "inner image";
