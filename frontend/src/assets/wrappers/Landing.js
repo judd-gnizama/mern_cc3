@@ -20,7 +20,9 @@ const Wrapper = styled.section`
       display: flex;
       align-items: center;
       justify-content: center;
-      max-width: 80%;
+      img {
+        width: 90%;
+      }
     }
     .section-inner {
       grid-area: inner;
@@ -51,6 +53,9 @@ const Wrapper = styled.section`
       grid-template-areas: "inner image";
 
       .section-bg {
+        img {
+          width: 100%;
+        }
       }
       .section-inner {
         margin-top: 0;

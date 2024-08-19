@@ -19,17 +19,15 @@ const HomeLayout = () => {
     default:
       return (
         <Wrapper>
-          <main className="page-home">
-            <Header />
-            {toggleMenu && <MenuMobile />}
+          <Header />
+          {toggleMenu && <MenuMobile />}
 
-            <div className="page-content">
-              <Outlet />
-            </div>
-            <footer>
-              <Footer />
-            </footer>
-          </main>
+          <div className="page-content">
+            <Outlet />
+          </div>
+          <footer>
+            <Footer />
+          </footer>
         </Wrapper>
       );
   }
