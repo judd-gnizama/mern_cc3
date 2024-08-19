@@ -58,7 +58,7 @@ html {
   --max-width: 1120px;
   --fixed-width: 600px;
   --fluid-width: 90vw;
-  --nav-height: 3.6rem;
+  --nav-height: 6rem;
 
   /* box shadow*/
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -168,29 +168,4 @@ a {
       border: 1px solid green;
     }
   }
-}
-
-/* Buttons */
-.btn {
-  font-family: inherit;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
-  border: none;
-}
-
-.btn-primary {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: 0.5px;
-  background-color: var(--primary-600);
-}
-.btn-secondary {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--black);
-  letter-spacing: 0.5px;
-  border: 1px solid var(--black);
-  background-color: transparent;
 }
