@@ -5,10 +5,12 @@ const Wrapper = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: var(--small-text);
   padding: 1rem 0;
   background-color: var(--grey-100);
   p {
+    margin-top: 0.5rem;
   }
 
   .link {

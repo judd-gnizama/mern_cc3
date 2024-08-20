@@ -1,8 +1,8 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Wrapper from "../assets/wrappers/DashboardLayout";
 import { Footer, LayoutHeader, LayoutSubheader } from "../components";
 import { useState } from "react";
-import { MdSettings } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
 import { dashboardLinks } from "../utils/Links";
 const DashboardLayout = () => {
   const [show, setShow] = useState(false);
@@ -10,7 +10,9 @@ const DashboardLayout = () => {
     <Wrapper>
       <header>
         <LayoutHeader title="Dashboard">
-          <MdSettings />
+          <NavLink to="profile">
+            <CgProfile />
+          </NavLink>
         </LayoutHeader>
       </header>
       <nav className="subheader">

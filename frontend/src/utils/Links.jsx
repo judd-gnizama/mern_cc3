@@ -28,9 +28,4 @@ export const dashboardLinks = [
     path: "all-groups",
     icon: null,
   },
-  {
-    text: "profile",
-    path: "profile",
-    icon: null,
-  },
 ];
