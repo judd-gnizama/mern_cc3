@@ -20,9 +20,7 @@ const Landing = () => {
             <Link to="/login" className="btn btn-primary">
               Start Queueing
             </Link>
-            <button className="btn btn-secondary">
-              Join an existing group
-            </button>
+            <Link className="btn btn-secondary">Join an existing group</Link>
           </div>
         </article>
       </section>
