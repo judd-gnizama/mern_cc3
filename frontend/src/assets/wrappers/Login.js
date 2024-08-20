@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaScreens from "../css/mediaScreens";
 
 const Wrapper = styled.section`
   height: calc(100vh - var(--nav-height));
@@ -89,14 +90,27 @@ const Wrapper = styled.section`
   }
 
   .utils {
+    margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
     font-size: var(--small-text);
     margin-bottom: 1rem;
 
     label {
       display: inline-flex;
+      align-items: center;
       gap: 0.25rem;
+    }
+  }
+
+  @media (min-width: ${mediaScreens.xs}) {
+    .utils {
+      flex-direction: unset;
+      justify-content: space-between;
     }
   }
 `;
