@@ -2,34 +2,37 @@ import { Outlet, useLocation } from "react-router-dom";
 import HomeContextProvider, {
   useHomeContext,
 } from "../contexts/HomeContextProvider";
-import { Footer, Header, MenuMobile } from "../components";
+import { Footer, Header, MenuMobile, SideMenu } from "../components";
 import Wrapper from "../assets/wrappers/HomeLayout";
 import Register from "./Register";
 import Login from "./Login";
+import DashboardLayout from "./DashboardLayout";
 
 const HomeLayout = () => {
   const { toggleMenu } = useHomeContext();
   const pathname = useLocation().pathname;
+  console.log(pathname);
+  console.log(pathname.includes("/dashboard"));
 
-  switch (pathname) {
-    case "/register":
-      return <Register />;
-    case "/login":
-      return <Login />;
-    default:
-      return (
-        <Wrapper>
-          <Header />
-          {toggleMenu && <MenuMobile />}
-
-          <div className="page-content">
-            <Outlet />
-          </div>
-          <footer>
-            <Footer />
-          </footer>
-        </Wrapper>
-      );
+  if (pathname === "/register") {
+    return <Register />;
+  } else if (pathname === "/login") {
+    return <Login />;
+  } else if (pathname.includes("/dashboard")) {
+    return <Outlet />;
+  } else {
+    return (
+      <Wrapper>
+        <Header />
+        <div className="page-content">
+          <Outlet />
+        </div>
+        <footer className="footer">
+          <Footer />
+        </footer>
+        {toggleMenu && <MenuMobile />}
+      </Wrapper>
+    );
   }
 };
 

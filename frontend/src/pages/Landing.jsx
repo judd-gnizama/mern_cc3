@@ -1,5 +1,6 @@
 import { badminton_smash } from "../assets/images";
 import Wrapper from "../assets/wrappers/Landing";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -16,10 +17,10 @@ const Landing = () => {
             </p>
           </div>
           <div className="btn-group">
-            <button className="btn btn-primary">Start Queueing</button>
-            <button className="btn btn-secondary">
-              Join an existing group
-            </button>
+            <Link to="/login" className="btn btn-primary">
+              Start Queueing
+            </Link>
+            <Link className="btn btn-secondary">Join an existing group</Link>
           </div>
         </article>
       </section>

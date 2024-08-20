@@ -15,7 +15,14 @@ const Header = () => {
         <div className="nav-right">
           <nav className="nav-links">
             {homeLinks.map(({ text, path }) => (
-              <NavLink to={path} key={text} className="nav-link" end>
+              <NavLink
+                to={path}
+                key={text}
+                className={`nav-link ${
+                  text === "register" && "btn btn-primary"
+                }`}
+                end
+              >
                 {text}
               </NavLink>
             ))}

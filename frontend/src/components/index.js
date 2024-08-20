@@ -3,3 +3,6 @@ export { default as Logo } from "./Logo";
 export { default as MenuMobile } from "./MenuMobile";
 export { default as Footer } from "./Footer";
 export { default as FormRow } from "./FormRow";
+export { default as SideMenu } from "./SideMenu";
+export { default as LayoutHeader } from "./LayoutHeader";
+export { default as LayoutSubheader } from "./LayoutSubheader";
