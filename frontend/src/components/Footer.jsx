@@ -5,7 +5,10 @@ const Footer = () => {
     <Wrapper>
       <p>&copy; 2024 Court Control. All Rights Reserved.</p>
       <p>
-        Powered by <Link className="link">JMT</Link>
+        Powered by{" "}
+        <Link to="/dashboard" className="link">
+          JMT
+        </Link>
       </p>
     </Wrapper>
   );
