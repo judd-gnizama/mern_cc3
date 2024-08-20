@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 const GroupLayout = () => {
   return (
     <>
-      <h2>Group Layout</h2>
+      <h2>Group</h2>
       <nav className="nav-links">
         <Link to="edit">EditGroup</Link>
         <Link to="info">GroupInfo</Link>

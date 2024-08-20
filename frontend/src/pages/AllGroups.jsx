@@ -1,17 +1,49 @@
 import Wrapper from "../assets/wrappers/AllGroups";
-import { PageSection } from "../components";
+import { AddButton, PageSection, SectionCard } from "../components";
 
 const AllGroups = () => {
+  const testGroups = [
+    {
+      name: "Badminton Mondays",
+      numOfMembers: 12,
+      description: "This is a badminton group happening on Mondays",
+      path: "../g/1",
+    },
+    {
+      name: "Wednesday Warriors",
+      numOfMembers: 15,
+      description: "A dedicated badminton group for Wednesdays",
+      path: "../g/1",
+    },
+    {
+      name: "Weekend Smashers",
+      numOfMembers: 20,
+      description: "For those who love badminton on weekends",
+      path: "../g/1",
+    },
+    {
+      name: "Evening Aces",
+      numOfMembers: 8,
+      description: "A group for evening badminton enthusiasts",
+      path: "../g/1",
+    },
+    {
+      name: "Morning Birdies",
+      numOfMembers: 10,
+      description: "Early morning badminton fun",
+      path: "../g/1",
+    },
+  ];
+
   return (
     <Wrapper>
       <div className="main-section">
         <PageSection title="my groups">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-          dolorem id exercitationem dolores illo eveniet ratione quos inventore
-          nostrum aut? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Debitis at deleniti ab voluptatum similique nesciunt adipisci, neque
-          quis, ipsa recusandae corrupti provident doloremque culpa dignissimos
-          in quo illo labore unde!
+          <div className="section-cards">
+            {testGroups.map((group) => (
+              <SectionCard key={group.name} {...group} />
+            ))}
+          </div>
         </PageSection>
         <PageSection title="other groups">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
@@ -19,6 +51,7 @@ const AllGroups = () => {
           nostrum aut?
         </PageSection>
       </div>
+      <AddButton label="Group" />
     </Wrapper>
   );
 };

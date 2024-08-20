@@ -8,6 +8,11 @@ const Wrapper = styled.main`
     gap: 1rem;
     padding: 1rem;
   }
+
+  .section-cards {
+    display: grid;
+    gap: 1rem;
+  }
 `;
 
 export default Wrapper;

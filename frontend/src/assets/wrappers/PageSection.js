@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
   .section {
-    border-radius: var(--border-radius);
+    /* border-radius: var(--border-radius); */
     padding: 0.5rem;
     padding-top: 2rem;
     position: relative;
-    box-shadow: var(--shadow-2);
-    background-color: var(--grey-200);
+    /* box-shadow: var(--shadow-2); */
+    /* background-color: var(--grey-200); */
   }
 
   .title {

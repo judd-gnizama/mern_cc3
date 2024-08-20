@@ -11,8 +11,6 @@ import DashboardLayout from "./DashboardLayout";
 const HomeLayout = () => {
   const { toggleMenu } = useHomeContext();
   const pathname = useLocation().pathname;
-  console.log(pathname);
-  console.log(pathname.includes("/dashboard"));
 
   if (pathname === "/register") {
     return <Register />;
