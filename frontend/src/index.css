@@ -177,6 +177,8 @@ a {
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   border: none;
+  display: flex;
+  align-items: center;
 }
 
 .btn-primary {
