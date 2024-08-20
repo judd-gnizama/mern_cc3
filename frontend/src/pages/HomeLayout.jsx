@@ -11,6 +11,8 @@ import DashboardLayout from "./DashboardLayout";
 const HomeLayout = () => {
   const { toggleMenu } = useHomeContext();
   const pathname = useLocation().pathname;
+  console.log(pathname);
+  console.log(pathname.includes("/dashboard"));
 
   if (pathname === "/register") {
     return <Register />;
@@ -25,7 +27,7 @@ const HomeLayout = () => {
         <div className="page-content">
           <Outlet />
         </div>
-        <footer>
+        <footer className="footer">
           <Footer />
         </footer>
         {toggleMenu && <MenuMobile />}
