@@ -9,3 +9,4 @@ export { default as LayoutSubheader } from "./LayoutSubheader";
 export { default as PageSection } from "./PageSection";
 export { default as AddButton } from "./AddButton";
 export { default as SectionCard } from "./SectionCard";
+export { default as TableList } from "./TableList";

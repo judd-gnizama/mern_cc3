@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import mediaScreens from "../css/mediaScreens";
 
 const Wrapper = styled.button`
   border: none;
@@ -7,8 +8,8 @@ const Wrapper = styled.button`
 
   .btn-add {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: clamp(20px, 20vw, 2.5rem);
+    right: clamp(20px, 20vw, 2.5rem);
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -23,6 +24,9 @@ const Wrapper = styled.button`
 
   .label {
     text-transform: capitalize;
+  }
+
+  @media (min-width: ${mediaScreens.sm}) {
   }
 `;
 

@@ -41,7 +41,7 @@ const AllGroups = () => {
         <PageSection title="my groups">
           <div className="section-cards">
             {testGroups.map((group) => (
-              <SectionCard key={group.name} {...group} />
+              <SectionCard key={group.name} {...group} isListStyle />
             ))}
           </div>
         </PageSection>
