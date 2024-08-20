@@ -17,3 +17,20 @@ export const homeLinks = [
     icon: <MdAddCircle />,
   },
 ];
+export const dashboardLinks = [
+  {
+    text: "feed",
+    path: "",
+    icon: null,
+  },
+  {
+    text: "groups",
+    path: "all-groups",
+    icon: null,
+  },
+  {
+    text: "profile",
+    path: "profile",
+    icon: null,
+  },
+];

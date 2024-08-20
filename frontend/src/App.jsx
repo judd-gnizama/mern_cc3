@@ -55,7 +55,7 @@ const router = createBrowserRouter([
             element: <UserProfile />,
           },
           {
-            index: true,
+            path: "",
             element: <DashboardFeed />,
           },
           {
