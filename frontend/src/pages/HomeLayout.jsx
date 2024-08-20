@@ -16,7 +16,7 @@ const HomeLayout = () => {
     return <Register />;
   } else if (pathname === "/login") {
     return <Login />;
-  } else if (pathname.startsWith("/dashboard")) {
+  } else if (pathname.includes("/dashboard")) {
     return <Outlet />;
   } else {
     return (
