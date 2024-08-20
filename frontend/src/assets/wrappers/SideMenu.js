@@ -51,13 +51,12 @@ const Wrapper = styled.aside`
   .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .nav-link {
     display: inline-flex;
     gap: 0.5rem;
-    font-size: 1.25rem;
     text-transform: capitalize;
   }
 `;

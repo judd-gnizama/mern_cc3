@@ -33,12 +33,12 @@ const Wrapper = styled.section`
 
       .section-title {
         font-weight: 700;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
       }
 
       p {
         margin-top: 1rem;
-        padding: 0 2rem;
+        padding: 0 1rem;
       }
 
       .btn-group {

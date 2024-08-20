@@ -46,7 +46,6 @@ const Wrapper = styled.nav`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: center;
   }
 
   .nav-link {
@@ -56,6 +55,10 @@ const Wrapper = styled.nav`
   }
 
   .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;

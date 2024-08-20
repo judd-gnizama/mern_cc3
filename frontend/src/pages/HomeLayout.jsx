@@ -27,8 +27,8 @@ const HomeLayout = () => {
           <footer>
             <Footer />
           </footer>
-          {/* {toggleMenu && <MenuMobile />} */}
-          <SideMenu />
+          {toggleMenu && <MenuMobile />}
+          {/* <SideMenu /> */}
         </Wrapper>
       );
   }
