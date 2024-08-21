@@ -7,10 +7,11 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import { useState } from "react";
-import Wrapper from "../assets/wrappers/TableListv2";
+import Wrapper from "../assets/wrappers/TableListv3";
 import { MdArrowDownward, MdArrowUpward } from "react-icons/md";
+import { Box } from "@chakra-ui/react";
 
-const TableListv2 = ({ data, columns }) => {
+const TableListv3 = ({ data, columns }) => {
   const [sorting, setSorting] = useState([]);
   const [filtering, setFiltering] = useState("");
 
@@ -21,6 +22,7 @@ const TableListv2 = ({ data, columns }) => {
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    columnResizeMode: "onChange",
     state: {
       sorting: sorting,
       globalFilter: filtering,
@@ -39,15 +41,13 @@ const TableListv2 = ({ data, columns }) => {
           onChange={(e) => setFiltering(e.target.value)}
         />
       </div>
-      <table>
-        <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => (
-                <th
-                  key={header.id}
-                  onClick={header.column.getToggleSortingHandler()}
-                >
+      <Box className="table" w={table.getTotalSize()}>
+        {/* <thead> */}
+        {table.getHeaderGroups().map((headerGroup) => (
+          <Box className="tr" key={headerGroup.id}>
+            {headerGroup.headers.map((header) => (
+              <Box className="th" w={header.getSize()} key={header.id}>
+                <div onClick={header.column.getToggleSortingHandler()}>
                   {flexRender(
                     header.column.columnDef.header,
                     header.getContext()
@@ -58,23 +58,32 @@ const TableListv2 = ({ data, columns }) => {
                       desc: <MdArrowDownward />,
                     }[header.column.getIsSorted() ?? null]
                   }
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                </div>
+
+                <Box
+                  onMouseDown={header.getResizeHandler()}
+                  onTouchStart={header.getResizeHandler()}
+                  className={`resizer ${
+                    header.column.getIsResizing() ? "isResizing" : ""
+                  }`}
+                ></Box>
+              </Box>
+            ))}
+          </Box>
+        ))}
+        {/* </thead> */}
+        {/* <tbody> */}
+        {table.getRowModel().rows.map((row) => (
+          <Box className="tr" key={row.id}>
+            {row.getVisibleCells().map((cell) => (
+              <Box className={"td"} key={cell.id} w={cell.column.getSize()}>
+                {flexRender(cell.column.columnDef.cell, cell.getContext())}
+              </Box>
+            ))}
+          </Box>
+        ))}
+        {/* </tbody> */}
+      </Box>
       <div>
         <button onClick={() => table.setPageIndex(0)}>first</button>
         <button
@@ -97,4 +106,4 @@ const TableListv2 = ({ data, columns }) => {
   );
 };
 
-export default TableListv2;
+export default TableListv3;

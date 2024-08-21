@@ -11,3 +11,5 @@ export { default as AddButton } from "./AddButton";
 export { default as SectionCard } from "./SectionCard";
 export { default as TableList } from "./TableList";
 export { default as TableListv2 } from "./TableListv2";
+export { default as TableListv3 } from "./TableListv3";
+export { default as GroupTable } from "./GroupTable";
