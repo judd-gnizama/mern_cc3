@@ -1,12 +1,12 @@
 import Wrapper from "../assets/wrappers/DashboardFeed";
-import { AddButton, PageSection, TableList } from "../components";
+import { AddButton, PageSection, TableListv2 } from "../components";
 
 const DashboardFeed = () => {
   return (
     <Wrapper>
       <div className="main-section">
         <PageSection title="news feed">
-          <TableList />
+          <TableListv2 />
         </PageSection>
       </div>
     </Wrapper>
