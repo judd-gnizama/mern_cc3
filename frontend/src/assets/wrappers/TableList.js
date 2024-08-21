@@ -48,7 +48,6 @@ export const Wrapper2 = styled.div`
   .item-body {
     padding: 1rem;
     min-width: 5rem;
-    border: 1px solid red;
   }
 `;
 
