@@ -1,5 +1,5 @@
 import Wrapper from "../assets/wrappers/DashboardFeed";
-import { AddButton, GroupTable, PageSection, TableListv2 } from "../components";
+import { GroupTable, PageSection } from "../components";
 
 const DashboardFeed = () => {
   return (
