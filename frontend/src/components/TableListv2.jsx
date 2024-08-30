@@ -21,6 +21,7 @@ const TableListv2 = ({ data, columns }) => {
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+
     state: {
       sorting: sorting,
       globalFilter: filtering,

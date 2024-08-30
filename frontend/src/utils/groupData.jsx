@@ -1,33 +1,17 @@
 import rawData from "../assets/mockdata/mockGroups.json";
 import { useMemo } from "react";
 import dayjs from "dayjs";
-import TableListv3 from "./TableListv3";
-import { Link } from "react-router-dom";
-import { GoLinkExternal } from "react-icons/go";
 
-const GroupTable = () => {
+export const getData = () => {
   const rem = (multi) => multi * 16;
   const columns = [
     {
       header: "Actions",
       accessorKey: "actions",
-      size: rem(4),
+      // size: rem(8),
       type: "action",
       enableHiding: false,
-      enableSorting: false,
-      cell: () => (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "1rem",
-          }}
-        >
-          <Link>
-            <GoLinkExternal />
-          </Link>
-        </div>
-      ),
+      cell: (obj) => <span>Hello{obj?.value}</span>,
     },
     {
       header: "group name",
@@ -70,7 +54,8 @@ const GroupTable = () => {
       }),
     []
   );
-  return <TableListv3 data={data} columns={columns} />;
+  return {
+    data,
+    columns,
+  };
 };
-
-export default GroupTable;

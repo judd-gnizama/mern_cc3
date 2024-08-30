@@ -1,5 +1,5 @@
 import Wrapper from "../assets/wrappers/DashboardFeed";
-import { GroupTable, PageSection } from "../components";
+import { GroupTable, PageSection, TableListv4 } from "../components";
 
 const DashboardFeed = () => {
   return (
@@ -7,6 +7,7 @@ const DashboardFeed = () => {
       <div className="main-section">
         <PageSection title="news feed">
           <GroupTable />
+          {/* <TableListv4 /> */}
         </PageSection>
       </div>
     </Wrapper>
