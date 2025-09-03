@@ -8,6 +8,7 @@ import {
 import { getData } from "../utils/groupData";
 
 const AllGroups = () => {
+  const testGroups = getData().data;
   // const testGroups = [
   //   {
   //     name: "Badminton Mondays",
@@ -40,28 +41,21 @@ const AllGroups = () => {
   //     path: "../g/1",
   //   },
   // ];
-  // return (
-  //   <Wrapper>
-  //     <div className="main-section">
-  //       <PageSection title="my groups">
-  //         <div className="section-cards">
-  //           {testGroups.map((group) => (
-  //             <SectionCard key={group.name} {...group} isListStyle />
-  //           ))}
-  //         </div>
-  //       </PageSection>
-  //       <PageSection title="other groups">
-  //         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-  //         dolorem id exercitationem dolores illo eveniet ratione quos inventore
-  //         nostrum aut?
-  //       </PageSection>
-  //     </div>
-  //     <AddButton label="Group" />
-  //   </Wrapper>
-  // );
-
-  const { data, columns } = getData();
-  return <TableListv4 data={data} columns={columns} />;
+  return (
+    <Wrapper>
+      <div className="main-section">
+        <PageSection title="my groups">
+          <div className="section-cards">
+            {testGroups.map((group) => (
+              <SectionCard key={group.name} {...group} isListStyle />
+            ))}
+          </div>
+        </PageSection>
+        <PageSection title="other groups">No groups to display</PageSection>
+      </div>
+      <AddButton label="Group" />
+    </Wrapper>
+  );
 };
 
 export default AllGroups;
