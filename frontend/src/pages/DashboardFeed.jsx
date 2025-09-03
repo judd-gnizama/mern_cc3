@@ -1,12 +1,21 @@
 import Wrapper from "../assets/wrappers/DashboardFeed";
-import { AddButton, PageSection, TableList } from "../components";
+import { PageSection } from "../components";
 
 const DashboardFeed = () => {
   return (
     <Wrapper>
       <div className="main-section">
         <PageSection title="news feed">
-          <TableList />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "70vh",
+            }}
+          >
+            News Feed Coming Soon!
+          </div>
         </PageSection>
       </div>
     </Wrapper>

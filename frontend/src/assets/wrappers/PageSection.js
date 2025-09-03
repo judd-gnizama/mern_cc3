@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Wrapper = styled.section`
   .section {
     /* border-radius: var(--border-radius); */
-    padding: 0.5rem;
     padding-top: 2rem;
     position: relative;
     /* box-shadow: var(--shadow-2); */
@@ -16,7 +15,6 @@ const Wrapper = styled.section`
     font-size: var(--small-text);
     text-transform: uppercase;
     top: 0.5rem;
-    left: 0.5rem;
   }
 `;
 
